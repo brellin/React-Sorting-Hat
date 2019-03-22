@@ -155,7 +155,7 @@ class App extends Component {
         </div>
 
         <footer style={{ display: this.state.react === true ? 'flex' : 'none' }}>
-          Copyright [William Charles Umstead Junior]
+          [Brellin]
         </footer>
       </div>
     );
