@@ -6,69 +6,69 @@ import Questions from './components/Questions/Questions';
 
 let questions = [
   {
-    output: 'First',
+    output: 'What (of these) do you fear most?',
     id: '11',
     answered: false,
     answers: {
-      answerOne: 'Gryffindor',
-      answerTwo: 'Hufflepuff',
-      answerThree: 'Ravenclaw',
-      answerFour: 'Slytherin'
+      answerOne: 'Inadequacy',
+      answerTwo: 'Failure',
+      answerThree: 'Slavery',
+      answerFour: 'Incapability'
     }
   },
   {
-    output: 'Second',
+    output: 'How would you like to be known?',
     id: '12',
     answered: false,
     answers: {
-      answerOne: 'Gryffindor',
-      answerTwo: 'Hufflepuff',
-      answerThree: 'Ravenclaw',
-      answerFour: 'Slytherin'
+      answerOne: 'The Brave',
+      answerTwo: 'The Good',
+      answerThree: 'The Wise',
+      answerFour: 'The Great'
     }
   },
   {
-    output: 'Third',
+    output: 'What road would you be most inclined to walk down?',
     id: '13',
     answered: false,
     answers: {
-      answerOne: 'Gryffindor',
-      answerTwo: 'Hufflepuff',
-      answerThree: 'Ravenclaw',
-      answerFour: 'Slytherin'
+      answerOne: 'A winding path, flurried with leaves',
+      answerTwo: 'A street, filled with ancient buildings',
+      answerThree: 'A bright, wide path, made of grass',
+      answerFour: 'A dark, narrow alley, lined with lanterns'
     }
   },
   {
-    output: 'Fourth',
+    output: 'Which instrument do you most often prefer to hear?',
     id: '14',
     answered: false,
     answers: {
-      answerOne: 'Gryffindor',
-      answerTwo: 'Hufflepuff',
-      answerThree: 'Ravenclaw',
-      answerFour: 'Slytherin'
+      answerOne: 'Trumpet',
+      answerTwo: 'Piano',
+      answerThree: 'Violin',
+      answerFour: 'Drums'
     }
   },
   {
-    output: 'Fifth',
+    output: 'What scent would tempt you most?',
     id: '15',
     answered: false,
     answers: {
-      answerOne: 'Gryffindor',
-      answerTwo: 'Hufflepuff',
-      answerThree: 'Ravenclaw',
-      answerFour: 'Slytherin'
+      answerOne: 'A Fireplace',
+      answerTwo: 'Home',
+      answerThree: 'Papyrus',
+      answerFour: 'The Sea'
     }
   },
   {
-    output: 'Sixth',
+    output: 'What makes you most uncomfortable?',
     id: '16',
     answered: false,
     answers: {
-      answerOne: 'Gryffindor',
-      answerTwo: 'Hufflepuff',
-      answerThree: 'Ravenclaw',
-      answerFour: 'Slytherin'
+      answerOne: 'Boredom',
+      answerTwo: 'The Cold',
+      answerThree: 'Loneliness',
+      answerFour: 'Hunger'
     }
   }
 ]
@@ -113,6 +113,18 @@ class App extends Component {
   render() {
     let houseNum = this.state['11'] + this.state['12'] + this.state['13'] + this.state['14'] + this.state['15'] + this.state['16'];
 
+    function hogHouse(num) {
+      if (num <= 9) {
+        return 'Gryffindor';
+      } else if (num > 9 && num <= 15) {
+        return 'Hufflepuff';
+      } else if (num > 15 && num <= 22) {
+        return 'Ravenclaw';
+      } else {
+        return 'Slytherin';
+      }
+    }
+
     return (
       <div className={`${this.state.react === true ? 'container' : ''}`}>
         <div
@@ -139,7 +151,7 @@ class App extends Component {
           style={{ display: this.state['16'] > 0 ? 'flex' : 'none' }}
           className='result'
         >
-          <h1>You have been sorted into {houseNum}!</h1>
+          <h1>You have been sorted into {hogHouse(houseNum)}!</h1>
         </div>
 
         <footer style={{ display: this.state.react === true ? 'flex' : 'none' }}>
