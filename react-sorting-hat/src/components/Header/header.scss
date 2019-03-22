@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    h1 {
+        font-size: 5rem;
+    }
+    .hat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 220px;
+        background: url(../../images/sortingHat.jpg) no-repeat center center / contain;
+        transition: all 1s ease-out;
+        &:hover {
+            height: 280px;
+            width: 300px;
+        }
+    }
+}
