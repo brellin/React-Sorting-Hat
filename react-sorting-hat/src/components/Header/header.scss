@@ -3,17 +3,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #00000080;
     width: 100%;
     h1 {
         font-size: 5rem;
-        color: white;
     }
     .hat {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
         height: 200px;
         width: 220px;
         background: url(../../images/sortingHat.jpg) no-repeat center center / contain;
