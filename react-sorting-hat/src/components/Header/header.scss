@@ -11,13 +11,19 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-shadow: 1px 1px 5px;
         height: 200px;
         width: 220px;
-        background: url(../../images/sortingHat.jpg) no-repeat center center / contain;
+        background: url(../../images/sortingHat.png) no-repeat center center / contain;
         transition: all 1s ease-out;
         &:hover {
             height: 280px;
             width: 300px;
+            font-size: 3rem;
+            text-shadow: 20px 50px 5px;
+            cursor: pointer;
         }
     }
 }
